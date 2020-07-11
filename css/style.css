@@ -1,11 +1,170 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../Montserrat/Montserrat-Bold.ttf);
+}
+
 * {
     box-sizing: border-box;
+    font-family: 'montserrat';
 }
+
 
 body {
     margin: 0px;
+    background-color: rgb(226, 225, 225);
 }
 
 img {
     max-width: 100%;
+}
+
+@keyframes head {
+
+    33.33% {
+        transform: translateY(0);
+        background-color: rgb(71, 47, 47);
+
+    }
+
+    66.66% {
+        transform: translateY(-50%);
+        background-color: rgb(49, 48, 27);
+
+    }
+}
+
+
+
+
+@keyframes tamaño {
+    33.33% {
+
+        width: 30%;
+        font-size: 28px;
+
+    }
+
+    66.66% {
+
+        width: 20%;
+        font-size: 30px;
+
+    }
+
+
+}
+
+@keyframes banner {
+    20% {
+        background-image: url(../images/nasa-NuE8Nu3otjo-unsplash.jpg);
+        background-size: cover;
+
+    }
+
+    40% {
+        background-image: url(../images/telecomunicaciones_bs_1.jpg);
+        background-size: cover;
+    }
+
+    60% {
+
+        background-image: url(../images/iconos.jpg);
+        background-size: cover;
+    }
+
+
+    80% {
+        background-image: url(../images/mundotel.jpg);
+        background-size: cover;
+    }
+
+}
+
+@keyframes foot {
+    from {
+
+        background-color: rgb(71, 47, 47);
+
+
+    }
+
+    to {
+        background-color: rgb(49, 48, 27);
+    }
+}
+
+nav {
+    min-height: 800px;
+    background-image: url(../images/fondo-lineas-curvas-espectro-abstracto_43605-2641.jpg);
+    background-size: cover;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav1 {
+    width: 20%;
+    height: 18%;
+    border: 5px solid white;
+
+    font-size: 28px;
+    text-align: center;
+
+}
+
+.nav1:hover {
+    animation: tamaño 2s 100ms;
+}
+
+.nav1 a {
+    text-decoration: none;
+    color: white;
+    display: block;
+
+
+}
+
+.nav1 img {
+    width: 50%;
+    padding: 20px;
+    filter: invert(90%);
+}
+
+.banner-box {
+    height: 700px;
+    max-height: 700px;
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-image: url(../images/denys-nevozhai-_QoAuZGAoPY-unsplash.jpg);
+    background-size: cover;
+    animation: banner 60s infinite;
+}
+
+
+
+header,
+footer {
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(71, 47, 47);
+    color: white;
+    animation: foot 3s 3s;
+}
+
+header {
+    font-size: 40px;
+    animation: head 3s 2;
+}
+
+footer {
+    animation: foot 20s 1s 5;
 }
